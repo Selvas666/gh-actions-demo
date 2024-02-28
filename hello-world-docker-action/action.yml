@@ -1,0 +1,13 @@
+name: hello-word-docker
+
+inputs: 
+  who-to-greet:
+    description: Who to greet?
+    required: true
+    default: World
+
+outputs:
+  time: 
+    description: current time
+
+runs: 
