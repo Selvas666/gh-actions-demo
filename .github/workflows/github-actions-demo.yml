@@ -1,0 +1,21 @@
+name: GitHub Actions Demo
+
+on: 
+  push:
+    branches: main
+    paths-ignore: [.github/**]
+  pull_request_target:
+    branches: main
+  schedule: 
+    - cron: '15 16 * * SUN'
+  workflow_dispatch:
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "🎉 The job was triggered by event: ${{ github.event_name }}"
+      - uses: actions/checkout@v4.1.1
+      - run: git branch
+      - run: git ls-files
