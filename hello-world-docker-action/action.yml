@@ -10,4 +10,8 @@ outputs:
   time: 
     description: current time
 
-runs: 
+runs:
+  using: docker
+  image: Dockerfile
+  env:
+    INPUT_WHO_TO_GREET: ${{ inputs.who-to-greet }}
