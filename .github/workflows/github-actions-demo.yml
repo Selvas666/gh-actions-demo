@@ -28,7 +28,7 @@ jobs:
   Test:
     runs-on: ubuntu-latest
     needs: Build
-    if: github.event_name == 'wokflow_dispatch'
+    if: github.event_name == 'workflow_dispatch'
     environment:
       name: Test
     steps:
@@ -37,7 +37,7 @@ jobs:
   Load-Test:
     runs-on: ubuntu-latest
     needs: Build
-    if: github.event_name == 'wokflow_dispatch'
+    if: github.event_name == 'workflow_dispatch'
     environment: 
       name: Load-Test
     steps:
