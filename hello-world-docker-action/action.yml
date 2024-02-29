@@ -1,4 +1,5 @@
 name: hello-word-docker
+description: hello-world action using docker
 
 inputs: 
   who-to-greet:
